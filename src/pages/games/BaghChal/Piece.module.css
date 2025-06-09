@@ -1,0 +1,33 @@
+.piece {
+    --piece-size: calc(var(--cell-size, 70px) * 0.6);
+    width: var(--piece-size);
+    height: var(--piece-size);
+    border-radius: 50%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-size: calc(var(--piece-size) * 0.55);
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: box-shadow 0.2s;
+}
+
+.piece.tiger {
+    background: #ffd700;
+}
+.piece.tiger:hover {
+    box-shadow: 0 2px 10px rgba(255, 152, 0, 0.2);
+    box-shadow: 0 0 0 2px #b76e00;
+}
+
+.piece.goat {
+    background: #e7e7e7;
+}
+
+.piece.goat:hover {
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 2px #fff;
+}

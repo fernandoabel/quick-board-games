@@ -1,0 +1,86 @@
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.gameStatus {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 2em;
+}
+
+.gameBoard {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 2px solid #646cff;
+    border-radius: 8px;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    /* gap: 0.5px; */
+}
+
+.boardContainer {
+    --cell-size: 100px;
+    background-image: url('/assets/baghchal-board.svg');
+    background-size: calc(var(--cell-size) * 5) calc(var(--cell-size) * 5);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    /* padding: 2px; */
+    border-radius: 8px;
+    position: relative;
+    /* border: 1px solid #d2b48c;
+    outline: 1px solid #d2b48c; */
+    box-sizing: border-box;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.cell.selected {
+    background: #ffe4b5;
+    outline: 2px solid #ff9800;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    background: #8b5c2a;
+    z-index: 0;
+}
+
+.line.horizontal {
+    height: 2px;
+    width: 100%;
+    left: 0;
+}
+
+.line.vertical {
+    width: 2px;
+    height: 100%;
+    top: 0;
+}
+
+.line.diagonal {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.statusBar {
+    margin: 16px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #8b5c2a;
+    font-weight: bold;
+}

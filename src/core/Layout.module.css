@@ -1,0 +1,18 @@
+.layout {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'sidebar main';
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 100px 1fr;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.pageContent {
+    grid-area: main;
+    padding: 2rem 2rem 2rem 2rem;
+    min-height: 0;
+    min-width: 0;
+    margin-top: 0;
+}

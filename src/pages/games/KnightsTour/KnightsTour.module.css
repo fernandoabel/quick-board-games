@@ -1,0 +1,98 @@
+.square {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 1px;
+    text-align: center;
+
+    --square-size: 64px;
+    line-height: var(--square-size);
+    height: var(--square-size);
+    width: var(--square-size);
+}
+
+.square:hover {
+    border-color: #646cff;
+}
+
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.status {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 2em;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.gameInfo {
+    margin-top: 20px;
+}
+
+.gameMode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 1em;
+}
+
+.gameModeOption,
+.move {
+    min-width: 130px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.gameModeOption:hover,
+.move:hover {
+    border-color: #646cff;
+}
+
+.gameModeOption.active {
+    border-color: #646cff;
+}
+
+.move:focus,
+.move:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.possibleMove {
+    background-color: #2d3a4a;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px #646cff inset;
+    transition:
+        background-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.lastMove {
+    background-color: #ffd700;
+    color: #222;
+    box-shadow: 0 0 0 2px #ffa500 inset;
+    transition:
+        background-color 0.1s,
+        box-shadow 0.1s,
+        color 0.1s;
+}

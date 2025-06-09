@@ -1,0 +1,32 @@
+.description {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.gameRules {
+    margin-bottom: 1.5rem;
+    color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+}
+.gameRules:hover {
+    border-color: #646cff;
+}
+
+.gameRulesHeader {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.gameRulesContent {
+    margin-top: 0.75rem;
+    color: #aaa;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
